@@ -1,0 +1,46 @@
+{
+  "applications": "*",
+  "changelogDate": "20220525142414",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "info_adicional",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cpf",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telefone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "deficiencia",
+      "fieldType": "Deficiencia",
+      "fieldValues": "AUDITIVA,VISUAL,INTELECTUAL_MENTAL,MULTIPLA,FISICA,DOENCA_RARA,SEM_DEFICIENCIA"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "InfoAdicional",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "avaliacao",
+      "otherEntityRelationshipName": "infoAdicional",
+      "relationshipName": "avaliacao",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "infoAdicional",
+      "relationshipName": "user",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
