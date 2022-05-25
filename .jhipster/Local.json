@@ -1,0 +1,68 @@
+{
+  "applications": "*",
+  "changelogDate": "20220525141715",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "local",
+  "fields": [
+    {
+      "fieldName": "endereco",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telefone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "categoria",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notaMedia",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "localizacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lat",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "long",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "imagem",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "precoFilter",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "placeId",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Local",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "avaliacao",
+      "otherEntityRelationshipName": "local",
+      "relationshipName": "avaliacao",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
