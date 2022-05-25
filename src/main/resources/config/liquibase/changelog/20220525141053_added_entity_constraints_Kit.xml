@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Kit.
+    -->
+    <changeSet id="20220525141053-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="bateria_id"
+                                 baseTableName="kit"
+                                 constraintName="fk_kit__bateria_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bateria"/>
+
+        <addForeignKeyConstraint baseColumnNames="equipamento_id"
+                                 baseTableName="kit"
+                                 constraintName="fk_kit__equipamento_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="equipamento"/>
+    </changeSet>
+</databaseChangeLog>

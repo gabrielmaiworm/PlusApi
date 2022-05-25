@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Parceiro.
+    -->
+    <changeSet id="20220525141054-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="endereco_id"
+                                 baseTableName="parceiro"
+                                 constraintName="fk_parceiro__endereco_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="endereco"/>
+
+        <addForeignKeyConstraint baseColumnNames="conta_bancaria_id"
+                                 baseTableName="parceiro"
+                                 constraintName="fk_parceiro__conta_bancaria_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="conta_bancaria"/>
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="parceiro"
+                                 constraintName="fk_parceiro__user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"/>
+    </changeSet>
+</databaseChangeLog>

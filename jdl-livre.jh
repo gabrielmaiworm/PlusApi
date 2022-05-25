@@ -1,0 +1,152 @@
+entity Usuario {
+nome String,
+sobrenome String,
+nascimento LocalDate,
+documento Integer,
+lesao Lesao,
+situacao Situacao,
+uso Uso,
+nomeDependente String,
+nascimentoDependente LocalDate,
+telefone String
+facebook String,
+instagram String,
+termo Boolean,
+treinamento Boolean,
+fotoDoc ImageBlob,
+fotoComDoc ImageBlob,
+}
+
+entity Equipamento {
+numeroSerie Integer,
+nome String,
+status Status,
+fotoEquipamento ImageBlob
+}
+
+entity Bateria {
+numeroSerie Integer,
+status Status,
+carga Integer
+}
+
+entity Kit {
+statusKit StatusKit
+}
+
+enum StatusKit {
+	EM_USO, EM_ESPERA, EM_MANUTENCAO, EMERGENCIA, INATIVO 
+}
+
+entity  Parceiro {
+razaoSocial String,
+nomeFantasia String,
+cnpj String,
+inscricaoEstadual String,
+email String,
+telefone String, 
+tipoServico String,
+nomeGestor String,
+sobrenomeGestor String,
+documentoGestor Integer,
+telefoneGestor String,
+}
+
+entity Funcionario {
+nivelAcesso NivelAcesso,
+nome String, 
+sobrenome String,
+documento String,
+telefone String
+}
+
+enum Status {
+	EM_FUNCINAMENTO, EM_MANUTENCAO, COM_DEFEITO
+}
+
+enum Uso {
+	PROPRIO, DEPENDENTE
+}
+
+enum NivelAcesso {
+	ADMINISTRADOR, EQUIPE_TECNICA_REMOTA, EQUIPE_TECNICA_PRESENCIAL,
+    EQUIPE_LOGISTICA
+}
+
+enum Tipo {
+	CONTA_CORRENTE, CONTA_POUPANCA, CONTA_INVESTIMENTO
+}
+
+entity Endereco {
+cep String,
+logradouro String,
+numero Integer,
+complemento String,
+bairro String,
+cidade String,
+estado Estado,
+}
+
+
+
+entity ContaBancaria {
+banco String,
+agencia Integer,
+numeroConta Integer,
+tipo Tipo
+}
+
+enum Estado {
+	AC, AL, AP, AM, BA, CE, DF, ES,
+    GO, MA, MT, MS, MG, PA, PB, PR, PE, 
+    PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO  
+}
+
+enum Lesao {
+	PARAPLEGIA, TETRAPLEGIA, AMPUTADO, MOBILIDADE_REDUZIDA, LESAO_TEMPORARIA,
+    SEM_LESAO, OUTRO
+}
+
+enum Situacao {
+	TEMPORARIA, PERMANTENTE
+}
+
+relationship OneToOne {
+	Parceiro to Endereco
+}
+
+
+relationship OneToOne {
+	Parceiro to ContaBancaria
+}
+
+relationship ManyToOne {
+	Parceiro to User
+}
+
+relationship OneToOne {
+	Usuario to Endereco
+}
+
+relationship ManyToOne {
+	Funcionario to User
+}
+
+relationship ManyToOne {
+	Usuario{user} to User
+}
+
+relationship OneToOne {
+	Kit to Bateria
+}
+
+relationship OneToOne {
+	Kit to Equipamento
+}
+
+
+
+
+
+
+

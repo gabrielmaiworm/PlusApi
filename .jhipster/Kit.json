@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20220525141053",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "kit",
+  "fields": [
+    {
+      "fieldName": "statusKit",
+      "fieldType": "StatusKit",
+      "fieldValues": "EM_USO,EM_ESPERA,EM_MANUTENCAO,EMERGENCIA,INATIVO"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Kit",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "bateria",
+      "otherEntityRelationshipName": "kit",
+      "ownerSide": true,
+      "relationshipName": "bateria",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "equipamento",
+      "otherEntityRelationshipName": "kit",
+      "ownerSide": true,
+      "relationshipName": "equipamento",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

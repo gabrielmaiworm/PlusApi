@@ -1,0 +1,42 @@
+{
+  "applications": "*",
+  "changelogDate": "20220525141051",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "equipamento",
+  "fields": [
+    {
+      "fieldName": "numeroSerie",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValues": "EM_FUNCINAMENTO,EM_MANUTENCAO,COM_DEFEITO"
+    },
+    {
+      "fieldName": "fotoEquipamento",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Equipamento",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "kit",
+      "otherEntityRelationshipName": "equipamento",
+      "ownerSide": false,
+      "relationshipName": "kit",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

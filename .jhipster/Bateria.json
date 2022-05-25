@@ -1,0 +1,37 @@
+{
+  "applications": "*",
+  "changelogDate": "20220525141052",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "bateria",
+  "fields": [
+    {
+      "fieldName": "numeroSerie",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValues": "EM_FUNCINAMENTO,EM_MANUTENCAO,COM_DEFEITO"
+    },
+    {
+      "fieldName": "carga",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Bateria",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "kit",
+      "otherEntityRelationshipName": "bateria",
+      "ownerSide": false,
+      "relationshipName": "kit",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}
