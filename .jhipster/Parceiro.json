@@ -1,0 +1,81 @@
+{
+  "applications": "*",
+  "changelogDate": "20220525141054",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "parceiro",
+  "fields": [
+    {
+      "fieldName": "razaoSocial",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomeFantasia",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cnpj",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "inscricaoEstadual",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telefone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tipoServico",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomeGestor",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sobrenomeGestor",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "documentoGestor",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "telefoneGestor",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Parceiro",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "endereco",
+      "otherEntityRelationshipName": "parceiro",
+      "ownerSide": true,
+      "relationshipName": "endereco",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "contaBancaria",
+      "otherEntityRelationshipName": "parceiro",
+      "ownerSide": true,
+      "relationshipName": "contaBancaria",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "parceiro",
+      "relationshipName": "user",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

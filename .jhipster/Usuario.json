@@ -1,0 +1,99 @@
+{
+  "applications": "*",
+  "changelogDate": "20220525141050",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "usuario",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sobrenome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nascimento",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "documento",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lesao",
+      "fieldType": "Lesao",
+      "fieldValues": "PARAPLEGIA,TETRAPLEGIA,AMPUTADO,MOBILIDADE_REDUZIDA,LESAO_TEMPORARIA,SEM_LESAO,OUTRO"
+    },
+    {
+      "fieldName": "situacao",
+      "fieldType": "Situacao",
+      "fieldValues": "TEMPORARIA,PERMANTENTE"
+    },
+    {
+      "fieldName": "uso",
+      "fieldType": "Uso",
+      "fieldValues": "PROPRIO,DEPENDENTE"
+    },
+    {
+      "fieldName": "nomeDependente",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nascimentoDependente",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "telefone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "facebook",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "instagram",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "termo",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "treinamento",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "fotoDoc",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "fotoComDoc",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Usuario",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "endereco",
+      "otherEntityRelationshipName": "usuario",
+      "ownerSide": true,
+      "relationshipName": "endereco",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "usuario",
+      "relationshipName": "user",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

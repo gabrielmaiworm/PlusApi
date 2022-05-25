@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20220525141057",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "conta_bancaria",
+  "fields": [
+    {
+      "fieldName": "banco",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "agencia",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numeroConta",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "tipo",
+      "fieldType": "Tipo",
+      "fieldValues": "CONTA_CORRENTE,CONTA_POUPANCA,CONTA_INVESTIMENTO"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ContaBancaria",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "parceiro",
+      "otherEntityRelationshipName": "contaBancaria",
+      "ownerSide": false,
+      "relationshipName": "parceiro",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

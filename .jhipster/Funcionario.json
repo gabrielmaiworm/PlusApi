@@ -1,0 +1,44 @@
+{
+  "applications": "*",
+  "changelogDate": "20220525141055",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "funcionario",
+  "fields": [
+    {
+      "fieldName": "nivelAcesso",
+      "fieldType": "NivelAcesso",
+      "fieldValues": "ADMINISTRADOR,EQUIPE_TECNICA_REMOTA,EQUIPE_TECNICA_PRESENCIAL,EQUIPE_LOGISTICA"
+    },
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sobrenome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "documento",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telefone",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Funcionario",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "funcionario",
+      "relationshipName": "user",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

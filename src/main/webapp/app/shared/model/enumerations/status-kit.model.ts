@@ -1,0 +1,11 @@
+export enum StatusKit {
+  EM_USO = 'EM_USO',
+
+  EM_ESPERA = 'EM_ESPERA',
+
+  EM_MANUTENCAO = 'EM_MANUTENCAO',
+
+  EMERGENCIA = 'EMERGENCIA',
+
+  INATIVO = 'INATIVO',
+}
