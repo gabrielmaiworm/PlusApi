@@ -1,0 +1,49 @@
+entity Estabelecimento {
+endereco String,
+nome String,
+telefone String,
+categoria String,
+notaMedia Double,
+localizacao String,
+lat Float,
+long Float,
+imagem ImageBlob,
+precoFilter Integer,
+placeId String
+}
+
+entity Avaliacao {
+comentario String,
+nota Double,
+imagem ImageBlob,
+acessoEntradaPrincipal Boolean,
+acessoBanheiro Boolean,
+acessoAudioVisual Boolean,
+acessoCirculacaoInterna Boolean,
+acessoEstacionamento Boolean,
+acessoCalcada Boolean
+}
+
+entity InfoAdicional {
+nome String,
+cpf String,
+telefone String,
+deficiencia Deficiencia
+}
+
+enum Deficiencia {
+	AUDITIVA, VISUAL, INTELECTUAL_MENTAL, MULTIPLA, FISICA, DOENCA_RARA, SEM_DEFICIENCIA
+}
+
+relationship ManyToOne {
+	InfoAdicional{user} to User
+} 
+
+relationship OneToMany {
+	InfoAdicional to Avaliacao
+} 
+
+	
+
+
+
