@@ -1,0 +1,47 @@
+{
+  "applications": "*",
+  "changelogDate": "20220525142456",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "estabelecimento",
+  "fields": [
+    {
+      "fieldName": "endereco",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telefone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "categoria",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notaMedia",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "localizacao",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Estabelecimento",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "avaliacao",
+      "otherEntityRelationshipName": "estabelecimento",
+      "relationshipName": "avaliacao",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
