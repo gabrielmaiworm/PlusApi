@@ -1,0 +1,11 @@
+id;comentario;nota;imagem;imagem_content_type;acesso_entrada_principal;acesso_banheiro;acesso_audio_visual;acesso_circulacao_interna;acesso_estacionamento;acesso_calcada
+1;Concrete Health;7590;../fake-data/blob/hipster.png;image/png;true;true;true;false;true;false
+2;Mission Soap Illinois;86068;../fake-data/blob/hipster.png;image/png;true;true;false;true;false;false
+3;Fundamental Computer Stravenue;3321;../fake-data/blob/hipster.png;image/png;false;false;true;false;false;true
+4;lavender CFA solid;97809;../fake-data/blob/hipster.png;image/png;false;true;false;false;false;true
+5;1080p Identity optimize;31211;../fake-data/blob/hipster.png;image/png;true;true;false;true;true;true
+6;Sum;45863;../fake-data/blob/hipster.png;image/png;true;true;false;true;false;false
+7;Syrian Home Handcrafted;52325;../fake-data/blob/hipster.png;image/png;true;false;true;false;true;true
+8;Creative;65468;../fake-data/blob/hipster.png;image/png;false;true;true;false;true;false
+9;system fuchsia;55364;../fake-data/blob/hipster.png;image/png;true;true;true;true;false;false
+10;visualize SMS;33470;../fake-data/blob/hipster.png;image/png;true;true;true;false;true;true
