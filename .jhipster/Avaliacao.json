@@ -1,0 +1,66 @@
+{
+  "applications": "*",
+  "changelogDate": "20220525141634",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "avaliacao",
+  "fields": [
+    {
+      "fieldName": "comentario",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nota",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "imagem",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "acessoEntradaPrincipal",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "acessoBanheiro",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "acessoAudioVisual",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "acessoCirculacaoInterna",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "acessoEstacionamento",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "acessoCalcada",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Avaliacao",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "local",
+      "otherEntityRelationshipName": "avaliacao",
+      "relationshipName": "local",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "infoAdicional",
+      "otherEntityRelationshipName": "avaliacao",
+      "relationshipName": "infoAdicional",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
